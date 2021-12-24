@@ -7,6 +7,8 @@ const Search = () => {
 
     const [searchResults, setSearchResults] = useState(null);
 
+    const [dataLength, setDataLength] = useState("Loading...")
+
     var proxy = 'https://the-cors.herokuapp.com/';
     var api = `${proxy}https://www.cheapshark.com/api/1.0/games?title=${searchTo.toLowerCase()}`
 
@@ -14,15 +16,15 @@ const Search = () => {
     fetch(api).then(res => res.json()).then(data => {
         setSearchResults(data);
         console.log(data);
+        setDataLength(`${ data.length } results for your search.`);
     });
     }, [api, searchTo]);
 
 
     return ( 
         <div className="search-div">
-            <a href='/'>Game Dealer</a>
-            <p>Here are the games that you're looking for</p>
-            <p>Searching for { searchTo }</p>
+            <h1>These are the games that you're looking for: { searchTo }</h1>
+            <p>{ dataLength }</p>
             { searchResults && <List list={ searchResults } /> }
         </div>
      );

@@ -1,14 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.header{ 
+body {
+  /* background: linear-gradient(#212121, #263238);  não conseguirei usar pois não consigo adaptar o layout da lista de jogos*/
+  background-color: #212121;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.true-header{ 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 10px 0px;
+  color: #ffffff;
+}
+
+.search-div p {
+  margin-left: 10px;
+}
+
+.link-to-home {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.true-header input {
+  border: none;
+  border-radius: 5px;
   padding: 10px;
-  background-color: #f1f1f1;
+  background-color: #4f5b62;
+  color: #ffffff;
+  width: 200px;
+}
+
+.true-header input::placeholder{
+  color: #ffffff;
+}
+
+.single-link {
+  width: 200px;
+  text-align: center;
+}
+
+.single-link a {
+  transition: 0.3s ease all
+}
+
+.single-link a:hover{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  align-items: center;
+}
+
+.true-header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.homepage-div {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 100%;
+}
+
+.homepage-main-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 5% 0 0 5%;
+}
+
+.homepage-main-content input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #4f5b62;
+  color: #ffffff;
+  width: 80%;
+  margin: 5% 0 0  10%;
+}
+
+.homepage-main-content input::placeholder{
+  color: #ffffff;
+}
+
+.main-title h1 {
+  color: white;
+  font-size: 48px;
+  
+}
+
+.gamepad-div{
+  margin-top: 15%;
+}
+
+.gamepad-image {
+  width: 50%;
+  margin-left: 25%;
+  filter: invert(100%) sepia(0%) saturate(7475%) hue-rotate(126deg) brightness(100%) contrast(96%);
+}
+
+.search-div {
+  color: #ffffff;
+  padding: 2% 5%;
+}
+
+.search-div h1 {
+  font-size: 20px;
+}
+
+.single-game-found {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 4% 0 0 10%;
+  height: 100%;
+  background-color: #263238;
+  padding : 3% 0;
+  border-radius: 12px;
+}
+
+.image-single-game {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.name-single-game {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.price-single-game {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.link-single-game {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.link-single-game a {
+  background-color: #ffffff;
+  color: #263238;
+  text-decoration: none;
+  width: 60%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  transition: 0.3s ease all;
+}
+
+
+.link-single-game a:hover{
+  background-color: #263238;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
