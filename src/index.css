@@ -85,7 +85,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin: 5% 0 0 5%;
+  margin: 3% 0 0 5%;
 }
 
 .homepage-main-content input {
@@ -109,7 +109,7 @@ body {
 }
 
 .gamepad-div{
-  margin-top: 15%;
+  margin-top: 12%;
 }
 
 .gamepad-image {
@@ -141,26 +141,33 @@ body {
 }
 
 .image-single-game {
-  width: 15%;
+  width: 30%;
   display: flex;
   justify-content: center;
 }
 
+.mobile-top, .mobile-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+}
+
 .name-single-game {
-  width: 25%;
+  width: 50%;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
 .price-single-game {
-  width: 15%;
+  width: 30%;
   display: flex;
   justify-content: center;
 }
 
 .link-single-game {
-  width: 15%;
+  width: 30%;
   display: flex;
   justify-content: center;
 }
@@ -187,15 +194,32 @@ body {
 
 .game-div {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 3% 5%;
-  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 4% 0 0 10%;
   height: 100%;
+  width: 80%;
   background-color: #263238;
   border-radius: 12px;
   color: white;
+}
+
+.left {
+  padding: 3% 0% 3% 5%;
+  width: 50%;
+}
+
+.right {
+  padding: 3% 5%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  max-width: fit-content;
+  height: fit-content;
 }
 
 .main-game-info {
@@ -203,15 +227,17 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 0% 5%;
+  width: 200%;
 }
 
-.game-div p {
-  margin: 5px 0px;
+.main-game-info h1 {
+  font-size: 40px;
 }
 
 .price-p {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
+  margin-top: 3%;
 }
 
 .more-info {
@@ -223,26 +249,26 @@ body {
   height: 35vh;
   width: 35vw;
   border-radius: 12px;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
-.store-info p {
+.div-info p {
   display: flex;
   align-items: center;
 }
 
-.store-info p img {
+.div-info p img {
   margin: 0px 10px;
 }
 
-.metacritic-info{
+.div-info{
   display: flex;
   flex-direction: row;
   width: 100%; 
   justify-content: space-between; 
 }
 
-.metacritic-info button {
+.div-info button {
   background-color: #ffffff;
   color: #263238;
   text-decoration: none;
@@ -256,15 +282,86 @@ body {
   transition: 0.3s ease all;
 }
 
-.metacritic-info button:hover {
+.div-info button:hover {
   background-color: #263238;
   color: #ffffff;
   border: 2px solid #263238;
+}
+
+.about-us-div {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 5% 10%;
+  background-color: #263238;
+  color: white;
+  padding: 5%;
+  border-radius: 20px;
+}
+
+.about-us-div h1{
+  margin-bottom: 10px;
+}
+
+.about-us-div p a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
 }
 
 
 @media (max-width: 800px) {
   .single-link{
     display: none;
+  }
+  .game-div{
+    flex-direction: column-reverse;
+  }
+  .right, .left{
+    width: 100%;
+  }
+  .more-info{
+    width: 95%;
+  }
+  .homepage-div {
+    flex-direction: column;
+  }
+  .main-title h1{
+    margin-top: 10%;
+    font-size: 32px;
+  }
+  .input-search{
+    margin: 10% 0% 15% 0%;
+  }
+  .game-list-div{
+    width: 100%;
+  }
+  .single-game-found{
+    flex-direction: column;
+  }
+  .single-game-found img {
+    max-width: 100px;
+  }
+  .mobile-bottom, .mobile-top {
+    width: 100%;
+    margin: 5% 0%;
+  }
+  .main-game-info {
+    width: 100%;
+  }
+  .mobile-bottom a {
+    justify-content: center;
+    width: 30vw;
+    align-items: center;
+    height: 40px;
+  }
+  .mobile-top img {
+    padding: 3px;
+  }
+  .search-div {
+    width: 100%;
+  }
+  .search-data {
+    margin-left: 30px;
   }
 }

@@ -1,3 +1,4 @@
 # game-dealer
 
-A website for compare game prices. Until now, no CSS was done, just the logical structure behind the application. The application is built with React.js.
+A website for compare game prices. Now, we made the JS and CSS for the searchpage, gamepage and about us. It only remains the under10 and topgames to do.
+

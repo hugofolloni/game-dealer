@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { storesLink } from "./stores-links"
 
 const Game = () => {
 
@@ -10,7 +11,9 @@ const Game = () => {
     const [gameScore, setGameScore] = useState(null);
     const [gameStore, setGameStore] = useState(null);
     const [gameStoreLogo, setGameStoreLogo] = useState(null);
+    const [gameStoreLink, setGameStoreLink] = useState(null);
     const [gameReleaseDate, setGameReleaseDate] = useState(null);
+    const [gameMetacriticLink, setGameMetacriticLink] = useState(null);
     
     var proxy = 'https://the-cors.herokuapp.com/';
     var api = `${proxy}https://www.cheapshark.com/api/1.0/deals?id=${dealId}`
@@ -24,9 +27,15 @@ const Game = () => {
             setGameThumb(data.gameInfo.thumb);
             setGameScore(data.gameInfo.metacriticScore);
             setGameReleaseDate(timeConverter(data.gameInfo.releaseDate))
+            setGameMetacriticLink("https://metacritic.com/" + data.gameInfo.metacriticLink);
             const storeId = data.gameInfo.storeID
             var proxy = 'https://the-cors.herokuapp.com/';
             var api = `${proxy}https://www.cheapshark.com/api/1.0/stores`
+            for(var i = 0; i < storesLink.length; i++){
+                if(storeId === storesLink[i].storeID){
+                    setGameStoreLink(storesLink[i].link)
+                }
+             }
             fetch(api).then(res => res.json()).then(data => {
                 setGameStore(data[storeId - 1].storeName);
                 setGameStoreLogo("https://www.cheapshark.com" + data[storeId - 1].images.logo);
@@ -46,22 +55,31 @@ const Game = () => {
         return time;
     }
 
+    const goTo = (link) => {
+        window.location.href = link;
+    }
+
     return ( 
         <div className="game-div">
-            <div className="main-game-info">
-                <h1>{gameName}</h1>
-                <img src={ gameThumb } alt="" height='50px' />
+            <div className="left">
+                <div className="main-game-info">
+                    <h1>{gameName}</h1>
+                </div>
+                <p className='price-p'>Price: U${gamePrice}</p>
+                <div className="more-info">
+                    <div className="div-info">
+                        <p>Metacritic Score: { gameScore }</p>
+                        <button onClick={() => goTo(gameMetacriticLink) }>Review</button>
+                    </div>
+                    <div className="div-info">
+                        <p>Store: <img src={ gameStoreLogo } alt="" height='25px' />   { gameStore }</p>
+                        <button onClick={() => goTo(gameStoreLink) }>Go</button>
+                    </div>
+                    <p>Release date: { gameReleaseDate }</p>
+                </div>
             </div>
-            <p className='price-p'>Price: U${gamePrice}</p>
-            <div className="more-info">
-                <div className="metacritic-info">
-                    <p>MetaCritic Score: { gameScore }</p>
-                    <button>Review</button>
-                </div>
-                <div className="store-info">
-                    <p>Store: <img src={ gameStoreLogo } alt="" height='25px' />   { gameStore }</p>
-                </div>
-                <p>Release date: { gameReleaseDate }</p>
+            <div className="right">
+              <img src={ gameThumb } alt="" />
             </div>
         </div>
      );

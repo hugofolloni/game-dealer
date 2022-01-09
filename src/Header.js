@@ -32,7 +32,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="single-link">
-                        <a href="/">About us</a>
+                        <a href="/aboutus">About us</a>
                     </div>
                 </div>
             </div>

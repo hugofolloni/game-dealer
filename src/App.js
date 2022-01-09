@@ -3,6 +3,7 @@ import Homepage from "./Homepage";
 import Search from "./Search";
 import Game from "./Game";
 import Header from "./Header";
+import Aboutus from './Aboutus';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route exact path='/' element={<Homepage/>} />
           <Route path='/search' element={<Search/>} />
           <Route path='/game' element={<Game/>} />
+          <Route path='/aboutus' element={<Aboutus/>} />
         </Routes>
       </div>
     </Router>

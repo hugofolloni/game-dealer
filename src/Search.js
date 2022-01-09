@@ -23,8 +23,10 @@ const Search = () => {
 
     return ( 
         <div className="search-div">
-            <h1>These are the games that you're looking for: { searchTo }</h1>
-            <p>{ dataLength }</p>
+            <div className="search-data">
+                <h1>These are the games that you're looking for: { searchTo }</h1>
+                <p>{ dataLength }</p>
+            </div>
             { searchResults && <List list={ searchResults } /> }
         </div>
      );
