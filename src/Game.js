@@ -48,13 +48,21 @@ const Game = () => {
 
     return ( 
         <div className="game-div">
-            <h1>Game {gameName}</h1>
-            <p>Price: U${gamePrice}</p>
-            <img src={ gameThumb } alt="" height='50px' />
-            <p>Score: {gameScore }</p>
-            <p>StoreId: { gameStore }</p>
-            <img src={ gameStoreLogo } alt="" height='50px' />
-            <p>Release date: { gameReleaseDate }</p>
+            <div className="main-game-info">
+                <h1>{gameName}</h1>
+                <img src={ gameThumb } alt="" height='50px' />
+            </div>
+            <p className='price-p'>Price: U${gamePrice}</p>
+            <div className="more-info">
+                <div className="metacritic-info">
+                    <p>MetaCritic Score: { gameScore }</p>
+                    <button>Review</button>
+                </div>
+                <div className="store-info">
+                    <p>Store: <img src={ gameStoreLogo } alt="" height='25px' />   { gameStore }</p>
+                </div>
+                <p>Release date: { gameReleaseDate }</p>
+            </div>
         </div>
      );
 }

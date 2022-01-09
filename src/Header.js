@@ -26,7 +26,7 @@ const Header = () => {
                     <div className="single-link">
                         <a href="/">Under 10</a>
                     </div>
-                    <div className="single-link">
+                    <div className="single-input">
                         <div className="search-header-div">
                             <input type="text" placeholder="Search for a game..." value={ searchTo } onChange={(e) => setSearchTo(e.target.value)} onKeyDown={ handleSearch }/>
                         </div>

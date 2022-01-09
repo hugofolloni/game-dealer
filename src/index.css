@@ -184,3 +184,87 @@ body {
   color: #ffffff;
   border: 2px solid #ffffff;
 }
+
+.game-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3% 5%;
+  width: 80%;
+  margin: 4% 0 0 10%;
+  height: 100%;
+  background-color: #263238;
+  border-radius: 12px;
+  color: white;
+}
+
+.main-game-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0% 5%;
+}
+
+.game-div p {
+  margin: 5px 0px;
+}
+
+.price-p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.more-info {
+  background-color: #4f5b62;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35vh;
+  width: 35vw;
+  border-radius: 12px;
+  margin-top: 3%;
+}
+
+.store-info p {
+  display: flex;
+  align-items: center;
+}
+
+.store-info p img {
+  margin: 0px 10px;
+}
+
+.metacritic-info{
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+  justify-content: space-between; 
+}
+
+.metacritic-info button {
+  background-color: #ffffff;
+  color: #263238;
+  text-decoration: none;
+  width: 25%;
+  cursor: pointer;
+  text-align: center;
+  padding: 4px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 2px solid #263238;
+  transition: 0.3s ease all;
+}
+
+.metacritic-info button:hover {
+  background-color: #263238;
+  color: #ffffff;
+  border: 2px solid #263238;
+}
+
+
+@media (max-width: 800px) {
+  .single-link{
+    display: none;
+  }
+}
