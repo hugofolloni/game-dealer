@@ -12,3 +12,10 @@ On the first page, the user can search for a game by name, and we'll show the li
 - CheapShark API - [documentation](https://apidocs.cheapshark.com)
 
 ## 🎨 UI
+### Homepage:
+![image](https://user-images.githubusercontent.com/82226141/149824937-b1826ad3-10d8-4961-9fc6-4ffcfcd61b5b.png)
+### Searchpage: 
+![image](https://user-images.githubusercontent.com/82226141/149825036-fe21d7ed-f9ed-4004-b8f1-cf0731c6d8aa.png)
+![image](https://user-images.githubusercontent.com/82226141/149825240-c1b6bb82-e39f-4e41-8571-b6f812b8ad90.png)
+### Gamepage:
+![image](https://user-images.githubusercontent.com/82226141/149825214-3c7e3ce4-216c-430b-a98b-08198d6f9193.png)
