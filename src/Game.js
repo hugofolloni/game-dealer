@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { storesLink } from "./stores-links"
+import { storesLink } from "./data/stores-links"
 
 const Game = () => {
 

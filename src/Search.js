@@ -13,11 +13,11 @@ const Search = () => {
     var api = `${proxy}https://www.cheapshark.com/api/1.0/games?title=${searchTo.toLowerCase()}`
 
     useEffect(() => {
-    fetch(api).then(res => res.json()).then(data => {
-        setSearchResults(data);
-        console.log(data);
-        setDataLength(`${ data.length } results for your search.`);
-    });
+        fetch(api).then(res => res.json()).then(data => {
+            setSearchResults(data);
+            console.log(data);
+            setDataLength(`${ data.length } results for your search.`);
+        });
     }, [api, searchTo]);
 
 

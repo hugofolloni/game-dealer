@@ -169,6 +169,7 @@ body {
 .link-single-game {
   width: 30%;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -177,6 +178,9 @@ body {
   color: #263238;
   text-decoration: none;
   width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 5px;
   border-radius: 10px;
@@ -307,6 +311,24 @@ body {
   text-decoration: none;
   color: white;
   font-weight: 600;
+}
+
+.name-single-game{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-single-game{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.old-price-p {
+  text-decoration: line-through;
+  color: #615b5b;
+  margin-top: 5%;
 }
 
 

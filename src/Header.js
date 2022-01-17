@@ -21,10 +21,10 @@ const Header = () => {
                 </div>
                 <div className="links">
                     <div className="single-link">
-                        <a href="/">Top Games</a>
+                        <a href="/topgames">Top Games</a>
                     </div>
                     <div className="single-link">
-                        <a href="/">Under 10</a>
+                        <a href="/under10">Under 10</a>
                     </div>
                     <div className="single-input">
                         <div className="search-header-div">
