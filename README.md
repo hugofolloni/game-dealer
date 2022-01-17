@@ -19,3 +19,8 @@ On the first page, the user can search for a game by name, and we'll show the li
 ![image](https://user-images.githubusercontent.com/82226141/149825240-c1b6bb82-e39f-4e41-8571-b6f812b8ad90.png)
 ### Gamepage:
 ![image](https://user-images.githubusercontent.com/82226141/149825214-3c7e3ce4-216c-430b-a98b-08198d6f9193.png)
+
+
+### 🔥 Live:
+
+You can check this project running [here](https://game-dealer-app.netlify.app).
