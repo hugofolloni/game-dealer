@@ -28,7 +28,7 @@ const Header = () => {
                     </div>
                     <div className="single-input">
                         <div className="search-header-div">
-                            <input type="text" placeholder="Search for a game..." value={ searchTo } onChange={(e) => setSearchTo(e.target.value)} onKeyDown={ handleSearch }/>
+                            <input type="text" inputmode='search' placeholder="Search for a game..." value={ searchTo } onChange={(e) => setSearchTo(e.target.value)} onKeyDown={ handleSearch }/>
                         </div>
                     </div>
                     <div className="single-link">

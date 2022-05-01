@@ -18,7 +18,7 @@ const Homepage = () => {
                     <h1>Find the best prices <br /> for your favorite games</h1>
                 </div>
                 <div className="input-search">
-                    <input type="text" placeholder="Search for a game..." value={ searchTo } onChange={(e) => setSearchTo(e.target.value)} onKeyPress={ handleSearch }/>
+                    <input type="text" inputmode='search' placeholder="Search for a game..." value={ searchTo } onChange={(e) => setSearchTo(e.target.value)} onKeyPress={ handleSearch }/>
                 </div>
             </div>
 
